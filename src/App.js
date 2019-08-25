@@ -1,26 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import MainContainer from './Components/mainContainer';
+import ProjectsPanel from './Components/projectsPanel';
+import TeamsPanel from './Components/teamsPanel';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <MainContainer sideBarHighlight="Projects">
+        <h1 className="page-header">Overview</h1>
+        <div className="row">
+          <div className="col-md-4">
+            <ProjectsPanel />
+          </div>
+          <div className="col-md-4">
+            <TeamsPanel />
+          </div>
+          <div className="col-md-4">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h3 className="panel-title">Employees</h3>
+              </div>
+              <div className="panel-body">
+                <div className="table-responsive overview-table">
+                  <table className="table table-striped table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>Employee 1</td>
+                        <td>Position</td>
+                      </tr>
+                      <tr>
+                        <td>Employee 2</td>
+                        <td>Position</td>
+                      </tr>
+                      <tr>
+                        <td>Employee 3</td>
+                        <td>Position</td>
+                      </tr>
+                      <tr>
+                        <td>Employee 4</td>
+                        <td>Position</td>
+                      </tr>
+                      <tr>
+                        <td>Employee 5</td>
+                        <td>Position</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <a href="/employees" className="btn btn-primary form-control">
+                  View All Employee Data
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </MainContainer>
+    );
+  }
 }
 
 export default App;
