@@ -17,14 +17,15 @@ class ProjectsPanel extends Component {
   }
 
   fetchProjects() {
-    axios.get(`https://shrouded-crag-99446.herokuapp.com/projects`)
+    axios
+      .get(`https://shrouded-crag-99446.herokuapp.com/projects`)
       .then(res => this.setState({ projects: res.data }))
       .catch(err => {
-        console.log("Erro - fetch Projects --" + err);
+        console.log("Error - fetch Projects -- " + err);
       });
   }
 
-  render () {
+  render() {
     return (
       <div className="panel panel-default">
         <div className="panel-heading">
@@ -34,12 +35,18 @@ class ProjectsPanel extends Component {
           <div className="table-responsive overview-table">
             <table className="table table-striped table-bordered">
               <tbody>
-                { this.state.projects.map(project => 
-                <tr key={project._id}>
-                  <td>{project.ProjectName}</td>
-                  <td>Active {moment().utc().diff(project.ProjectStartDate,'days')} Days</td>
-                </tr>
-                )}
+                {this.state.projects.map(project => (
+                  <tr key={project._id}>
+                    <td>{project.ProjectName}</td>
+                    <td>
+                      Active{" "}
+                      {moment()
+                        .utc()
+                        .diff(project.ProjectStartDate, "days")}{" "}
+                      Days
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
