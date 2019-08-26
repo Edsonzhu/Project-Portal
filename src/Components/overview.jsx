@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import MainContainer from './Components/mainContainer';
-import ProjectsPanel from './Components/projectsPanel';
-import TeamsPanel from './Components/teamsPanel';
-import EmployeesPanel from './Components/employeesPanel';
+import MainContainer from './mainContainer';
+import ProjectsPanel from './projectsPanel';
+import TeamsPanel from './teamsPanel';
+import EmployeesPanel from './employeesPanel';
 
 
 class Overview extends Component {

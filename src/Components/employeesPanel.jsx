@@ -36,7 +36,7 @@ class EmployeesPanel extends Component {
                     <td>
                       {emp.FirstName} {emp.LastName}
                     </td>
-                    <td>{emp.Position}</td>
+                    <td>{emp.Position.PositionName}</td>
                   </tr>
                 ))}
               </tbody>
