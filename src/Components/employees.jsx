@@ -24,12 +24,12 @@ class Employees extends Component {
 
     render() {
         return(
-            <MainContainer sidebar="Employees">
+            <MainContainer sideBar="Employees">
                 <h1 className="page-header">Employees</h1>
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">Name (AND) Position</th>
+                            <th scope="col">Name &amp; Position</th>
                             <th scope="col">Address</th>
                             <th scope="col">Phone Number</th>
                             <th scope="col">Hire Date</th>
@@ -40,7 +40,10 @@ class Employees extends Component {
                         {this.state.employees.map(emp => 
                             <tr key={emp._id}>
                                 <td>{emp.FirstName} {emp.LastName} - {emp.Position.PositionName}</td>
-                                <td></td>
+                                <td>{emp.AddressStreet}, {emp.AddressCity}, {emp.AddressState}, {emp.AddressZip}</td>
+                                <td>{emp.PhoneNum} ex: {emp.Extension}</td>
+                                <td>{moment(emp.HireDate).utc().format("LL")}</td>
+                                <td>&#36; {emp.SalaryBonus}</td>
                             </tr>
                             )}
                     </tbody>
