@@ -8,7 +8,7 @@ import EmployeesPanel from './employeesPanel';
 class Overview extends Component {
     render() {
         return (
-      <MainContainer sideBar="Projects">
+      <MainContainer sideBar="Overview">
       <h1 className="page-header">Overview</h1>
       <div className="row">
         <div className="col-md-4">
