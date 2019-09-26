@@ -18,7 +18,7 @@ class Projects extends Component {
 
   fetchProjects() {
     axios
-      .get(`https://shrouded-crag-99446.herokuapp.com/projects`)
+      .get(`https://team-api-ez.herokuapp.com/projects`)
       .then(res => {
         this.setState({ projects: res.data });
       })

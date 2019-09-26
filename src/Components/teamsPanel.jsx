@@ -17,7 +17,7 @@ class TeamsPanel extends Component {
 
   fetchTeams() {
     axios
-      .get(`https://shrouded-crag-99446.herokuapp.com/teams`)
+      .get(`https://team-api-ez.herokuapp.com/teams`)
       .then(res => this.setState({ teams: res.data }))
       .catch(err => console.log("Error - fetch Teams --" + err));
   }

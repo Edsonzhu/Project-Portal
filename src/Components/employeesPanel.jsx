@@ -17,7 +17,7 @@ class EmployeesPanel extends Component {
 
   fetchEmployees() {
     axios
-      .get(`https://shrouded-crag-99446.herokuapp.com/employees`)
+      .get(`https://team-api-ez.herokuapp.com/employees`)
       .then(res => this.setState({ employees: res.data }))
       .catch(err => console.log("Error - fetch Employees -- " + err));
   }
