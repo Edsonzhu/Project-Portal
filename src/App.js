@@ -7,9 +7,9 @@ import Employees from './Components/employees';
 class App extends Component {
   render() {
     return (
-      // <Overview />
-      // <Projects />
-      // <Teams />
+      <Overview />
+      <Projects />
+      <Teams />
       <Employees />
     );
   }
